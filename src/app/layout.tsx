@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     template: "%s | Soulmates Orchestra",
   },
   description:
-    "World-class orchestra and DJ services for corporate events, bar/bat mitzvahs, and private celebrations in Montreal.",
+    "World-class orchestra and DJ services for corporate events, bar/bat mitzvahs, and private celebrations in Paris.",
   keywords: [
     "orchestra",
     "live entertainment",
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     "bar mitzvah",
     "bat mitzvah",
     "wedding music",
-    "Montreal",
+    "Paris",
     "DJ services",
     "event entertainment",
   ],
@@ -37,13 +37,13 @@ export const metadata: Metadata = {
   creator: "Soulmates Orchestra",
   openGraph: {
     type: "website",
-    locale: "en_CA",
-    alternateLocale: "fr_CA",
+    locale: "fr_FR",
+    alternateLocale: "en_GB",
     url: "https://www.soulmatesorchestra.com",
     siteName: "Soulmates Orchestra",
     title: "Soulmates Orchestra | Premium Live Entertainment",
     description:
-      "World-class orchestra and DJ services for corporate events, bar/bat mitzvahs, and private celebrations in Montreal.",
+      "World-class orchestra and DJ services for corporate events, bar/bat mitzvahs, and private celebrations in Paris.",
     images: [
       {
         url: "/og-image.jpg",

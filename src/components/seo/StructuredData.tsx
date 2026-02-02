@@ -38,27 +38,27 @@ export function StructuredData({ type, data = {} }: StructuredDataProps) {
     email: SITE_CONFIG.email,
     address: {
       "@type": "PostalAddress",
-      addressLocality: "Montreal",
-      addressRegion: "QC",
-      addressCountry: "CA",
+      addressLocality: "Paris",
+      addressRegion: "Île-de-France",
+      addressCountry: "FR",
     },
     geo: {
       "@type": "GeoCoordinates",
-      latitude: 45.5017,
-      longitude: -73.5673,
+      latitude: 48.8566,
+      longitude: 2.3522,
     },
     areaServed: [
       {
         "@type": "City",
-        name: "Montreal",
+        name: "Paris",
       },
       {
         "@type": "State",
-        name: "Quebec",
+        name: "Île-de-France",
       },
       {
         "@type": "Country",
-        name: "Canada",
+        name: "France",
       },
     ],
     priceRange: "$$$",
@@ -88,7 +88,7 @@ export function StructuredData({ type, data = {} }: StructuredDataProps) {
     },
     areaServed: {
       "@type": "City",
-      name: "Montreal",
+      name: "Paris",
     },
     hasOfferCatalog: {
       "@type": "OfferCatalog",

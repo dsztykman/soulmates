@@ -2,8 +2,8 @@ export const SITE_CONFIG = {
   name: "Soulmates Orchestra",
   url: "https://www.soulmatesorchestra.com",
   email: "info@soulmatesorchestra.com",
-  phone: "+1 (514) 555-0123",
-  location: "Montreal, Quebec",
+  phone: "+33 6 50 46 93 96",
+  location: "Paris, France",
   social: {
     instagram: "https://instagram.com/soulmatesorchestra",
     youtube: "https://youtube.com/@soulmatesorchestra",

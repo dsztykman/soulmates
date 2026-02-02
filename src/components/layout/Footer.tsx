@@ -116,7 +116,7 @@ export function Footer() {
               &copy; {currentYear} {SITE_CONFIG.name}. {t("footer.copyright")}
             </p>
             <p className="flex items-center gap-1">
-              Crafted with <span className="text-[#C9A962]">♪</span> in Montreal
+              Crafted with <span className="text-[#C9A962]">♪</span> in Paris
             </p>
           </div>
         </div>
