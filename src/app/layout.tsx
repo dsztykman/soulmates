@@ -76,16 +76,14 @@ export const metadata: Metadata = {
   },
 };
 
+// Font classes exported for use in locale layout
+export const fontVariables = `${inter.variable} ${playfair.variable}`;
+
 export default function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
-  return (
-    <html suppressHydrationWarning>
-      <body className={`${inter.variable} ${playfair.variable} antialiased`}>
-        {children}
-      </body>
-    </html>
-  );
+  // Root layout just passes children - html/body are in locale layout
+  return children;
 }
