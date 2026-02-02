@@ -105,13 +105,49 @@ npm start
 npm run lint
 ```
 
+## Docker
+
+### Build and Run
+
+```bash
+# Build the Docker image
+docker build -t soulmates-orchestra .
+
+# Run the container
+docker run -p 3000:3000 \
+  -e RESEND_API_KEY=your_api_key \
+  -e CONTACT_EMAIL=your@email.com \
+  soulmates-orchestra
+```
+
+### Using Docker Compose
+
+```bash
+# Create .env file with your variables
+echo "RESEND_API_KEY=your_api_key" > .env
+echo "CONTACT_EMAIL=your@email.com" >> .env
+
+# Build and run
+docker compose up -d
+
+# View logs
+docker compose logs -f
+
+# Stop
+docker compose down
+```
+
+The site will be available at http://localhost:3000
+
 ## Deployment
+
+### Vercel
 
 Deploy to Vercel with one click:
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/your-repo/soulmates)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/dsztykman/soulmates)
 
-### Required Environment Variables on Vercel
+### Required Environment Variables
 
 1. `RESEND_API_KEY` - Get from [Resend](https://resend.com)
 2. `CONTACT_EMAIL` - Email for receiving contact form submissions
