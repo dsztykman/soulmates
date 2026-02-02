@@ -144,6 +144,13 @@
       "locationValue": "Paris, France"
     }
   },
+  "instagram": {
+    "title": "Follow Our Journey",
+    "subtitle": "Behind the scenes, live moments, and unforgettable celebrations.",
+    "followUs": "Follow us on Instagram",
+    "followButton": "Follow on Instagram",
+    "viewPost": "View on Instagram"
+  },
   "footer": {
     "tagline": "Creating unforgettable moments through the power of live music.",
     "quickLinks": "Quick Links",

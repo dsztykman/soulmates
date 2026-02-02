@@ -144,6 +144,13 @@
       "locationValue": "Paris, France"
     }
   },
+  "instagram": {
+    "title": "Suivez Notre Aventure",
+    "subtitle": "Les coulisses, moments live et célébrations inoubliables.",
+    "followUs": "Suivez-nous sur Instagram",
+    "followButton": "Suivre sur Instagram",
+    "viewPost": "Voir sur Instagram"
+  },
   "footer": {
     "tagline": "Créer des moments inoubliables grâce à la puissance de la musique live.",
     "quickLinks": "Liens Rapides",
