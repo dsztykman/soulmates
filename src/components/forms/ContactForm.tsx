@@ -2,12 +2,14 @@
 
 import { useState } from "react";
 import { useTranslations } from "next-intl";
-import { useForm } from "react-hook-form";
+import { useForm, Controller } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
+import { format } from "date-fns";
 import { motion, AnimatePresence } from "framer-motion";
 import { Send, CheckCircle, AlertCircle } from "lucide-react";
 import { Input, Textarea, Select } from "@/components/ui/Input";
+import { DatePicker } from "@/components/ui/DatePicker";
 import { Button } from "@/components/ui/Button";
 
 const contactSchema = z.object({
@@ -16,7 +18,7 @@ const contactSchema = z.object({
   phone: z.string().min(10, "Invalid phone number"),
   company: z.string().optional(),
   eventType: z.string().min(1, "Please select an event type"),
-  eventDate: z.string().min(1, "Please select a date"),
+  eventDate: z.date({ message: "Please select a date" }),
   guestCount: z.string().min(1, "Please provide guest count"),
   message: z.string().min(10, "Message must be at least 10 characters"),
   honeypot: z.string().max(0), // Spam prevention
@@ -31,6 +33,7 @@ export function ContactForm() {
   const {
     register,
     handleSubmit,
+    control,
     reset,
     formState: { errors },
   } = useForm<ContactFormData>({
@@ -56,12 +59,18 @@ export function ContactForm() {
     setStatus("loading");
 
     try {
+      // Convert date to ISO string for API
+      const formData = {
+        ...data,
+        eventDate: format(data.eventDate, "yyyy-MM-dd"),
+      };
+
       const response = await fetch("/api/contact", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify(data),
+        body: JSON.stringify(formData),
       });
 
       if (!response.ok) {
@@ -135,12 +144,19 @@ export function ContactForm() {
           error={errors.eventType?.message}
           {...register("eventType")}
         />
-        <Input
-          id="eventDate"
-          type="date"
-          label={t("eventDate")}
-          error={errors.eventDate?.message}
-          {...register("eventDate")}
+        <Controller
+          name="eventDate"
+          control={control}
+          render={({ field }) => (
+            <DatePicker
+              label={t("eventDate")}
+              value={field.value}
+              onChange={field.onChange}
+              placeholder={t("eventDatePlaceholder")}
+              error={errors.eventDate?.message}
+              minDate={new Date()}
+            />
+          )}
         />
       </div>
 

@@ -127,6 +127,7 @@
         "other": "Other"
       },
       "eventDate": "Event Date",
+      "eventDatePlaceholder": "Select a date",
       "guestCount": "Guest Count",
       "guestCountPlaceholder": "Estimated number of guests",
       "message": "Message",
