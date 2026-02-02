@@ -1,0 +1,192 @@
+{
+  "common": {
+    "getQuote": "Get a Quote",
+    "viewGallery": "View Gallery",
+    "learnMore": "Learn More",
+    "contactUs": "Contact Us",
+    "ourServices": "Our Services",
+    "navigation": {
+      "home": "Home",
+      "services": "Services",
+      "about": "About",
+      "gallery": "Gallery",
+      "contact": "Contact"
+    }
+  },
+  "hero": {
+    "title": "Elevate Your Event",
+    "subtitle": "Premium Live Entertainment",
+    "description": "World-class orchestra and DJ services for corporate events, religious celebrations, and private occasions.",
+    "cta": {
+      "primary": "Get a Quote",
+      "secondary": "View Gallery"
+    }
+  },
+  "services": {
+    "title": "Our Services",
+    "subtitle": "Tailored entertainment for every occasion",
+    "corporate": {
+      "title": "Corporate Events",
+      "shortDescription": "Elevate your corporate gatherings with sophisticated live entertainment.",
+      "description": "From galas and award ceremonies to product launches and company celebrations, we create the perfect ambiance for your corporate events. Our versatile musicians adapt to any atmosphere, ensuring your event leaves a lasting impression.",
+      "features": [
+        "Customized playlists for your brand",
+        "Professional sound and lighting",
+        "Seamless coordination with event planners",
+        "Background to high-energy entertainment"
+      ]
+    },
+    "barMitzvahs": {
+      "title": "Bar & Bat Mitzvahs",
+      "shortDescription": "Celebrate this milestone with unforgettable music and energy.",
+      "description": "We specialize in creating magical Bar and Bat Mitzvah celebrations that honor tradition while bringing modern excitement. Our experienced team knows exactly how to engage guests of all ages and make the honoree feel like a star.",
+      "features": [
+        "Traditional and contemporary music",
+        "Interactive entertainment for all ages",
+        "Custom hora and candle lighting music",
+        "High-energy dance sets"
+      ]
+    },
+    "privateEvents": {
+      "title": "Private Events",
+      "shortDescription": "Make your special moments truly extraordinary.",
+      "description": "Whether it's a wedding, anniversary, birthday milestone, or intimate gathering, we bring warmth and sophistication to your celebration. Our personalized approach ensures every detail reflects your unique vision.",
+      "features": [
+        "Personalized song selections",
+        "Intimate to large-scale events",
+        "Ceremony and reception music",
+        "Genre-spanning repertoire"
+      ]
+    },
+    "viewDetails": "View Details"
+  },
+  "stats": {
+    "events": "Events Hosted",
+    "clients": "Happy Clients",
+    "years": "Years of Experience"
+  },
+  "about": {
+    "title": "Our Story",
+    "subtitle": "Passion for Music, Dedication to Excellence",
+    "description": "Soulmates Orchestra was born from a passion for music and a dedication to creating unforgettable moments. With years of experience performing at the most prestigious venues, we've perfected the art of reading the room and delivering exactly what each event needs.",
+    "mission": {
+      "title": "Our Mission",
+      "description": "To transform every event into an extraordinary experience through the power of live music, bringing people together and creating memories that last a lifetime."
+    },
+    "values": {
+      "title": "What Sets Us Apart",
+      "items": [
+        {
+          "title": "Musical Excellence",
+          "description": "Our musicians are conservatory-trained professionals with decades of combined experience."
+        },
+        {
+          "title": "Versatility",
+          "description": "From classical elegance to contemporary hits, we seamlessly adapt to any musical style."
+        },
+        {
+          "title": "Personalization",
+          "description": "Every event is unique, and we work closely with you to create a customized experience."
+        },
+        {
+          "title": "Reliability",
+          "description": "Professional, punctual, and prepared - we handle every detail so you can enjoy your event."
+        }
+      ]
+    }
+  },
+  "gallery": {
+    "title": "Gallery",
+    "subtitle": "Moments We've Created",
+    "categories": {
+      "all": "All",
+      "corporate": "Corporate",
+      "celebrations": "Celebrations",
+      "private": "Private Events"
+    }
+  },
+  "contact": {
+    "title": "Get in Touch",
+    "subtitle": "Let's create something extraordinary together",
+    "description": "Ready to elevate your event? Fill out the form below and we'll get back to you within 24 hours.",
+    "form": {
+      "name": "Full Name",
+      "namePlaceholder": "Enter your full name",
+      "email": "Email Address",
+      "emailPlaceholder": "your@email.com",
+      "phone": "Phone Number",
+      "phonePlaceholder": "+1 (555) 000-0000",
+      "company": "Company (Optional)",
+      "companyPlaceholder": "Your company name",
+      "eventType": "Event Type",
+      "eventTypePlaceholder": "Select event type",
+      "eventTypes": {
+        "corporate": "Corporate Event",
+        "barMitzvah": "Bar/Bat Mitzvah",
+        "private": "Private Event",
+        "other": "Other"
+      },
+      "eventDate": "Event Date",
+      "guestCount": "Guest Count",
+      "guestCountPlaceholder": "Estimated number of guests",
+      "message": "Message",
+      "messagePlaceholder": "Tell us about your event vision...",
+      "submit": "Send Inquiry",
+      "submitting": "Sending...",
+      "success": "Thank you! We'll be in touch soon.",
+      "error": "Something went wrong. Please try again."
+    },
+    "info": {
+      "email": "Email",
+      "phone": "Phone",
+      "location": "Location",
+      "locationValue": "Montreal, Quebec"
+    }
+  },
+  "footer": {
+    "tagline": "Creating unforgettable moments through the power of live music.",
+    "quickLinks": "Quick Links",
+    "connect": "Connect",
+    "copyright": "All rights reserved.",
+    "social": {
+      "instagram": "Instagram",
+      "youtube": "YouTube",
+      "tiktok": "TikTok",
+      "facebook": "Facebook"
+    }
+  },
+  "metadata": {
+    "home": {
+      "title": "Soulmates Orchestra | Premium Live Entertainment",
+      "description": "World-class orchestra and DJ services for corporate events, bar/bat mitzvahs, and private celebrations in Montreal."
+    },
+    "services": {
+      "title": "Our Services | Soulmates Orchestra",
+      "description": "Discover our tailored entertainment services for corporate events, religious celebrations, and private occasions."
+    },
+    "corporate": {
+      "title": "Corporate Events | Soulmates Orchestra",
+      "description": "Elevate your corporate gatherings with sophisticated live entertainment from Soulmates Orchestra."
+    },
+    "barMitzvahs": {
+      "title": "Bar & Bat Mitzvahs | Soulmates Orchestra",
+      "description": "Celebrate with unforgettable music and energy. Specializing in Bar and Bat Mitzvah celebrations."
+    },
+    "privateEvents": {
+      "title": "Private Events | Soulmates Orchestra",
+      "description": "Make your special moments extraordinary with personalized live entertainment."
+    },
+    "about": {
+      "title": "About Us | Soulmates Orchestra",
+      "description": "Learn about our passion for music and dedication to creating unforgettable moments."
+    },
+    "gallery": {
+      "title": "Gallery | Soulmates Orchestra",
+      "description": "Browse our portfolio of memorable events and performances."
+    },
+    "contact": {
+      "title": "Contact Us | Soulmates Orchestra",
+      "description": "Get in touch to discuss your event. We'll help create an unforgettable experience."
+    }
+  }
+}

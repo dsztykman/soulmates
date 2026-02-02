@@ -1,0 +1,192 @@
+{
+  "common": {
+    "getQuote": "Demander un Devis",
+    "viewGallery": "Voir la Galerie",
+    "learnMore": "En Savoir Plus",
+    "contactUs": "Nous Contacter",
+    "ourServices": "Nos Services",
+    "navigation": {
+      "home": "Accueil",
+      "services": "Services",
+      "about": "À Propos",
+      "gallery": "Galerie",
+      "contact": "Contact"
+    }
+  },
+  "hero": {
+    "title": "Sublimez Votre Événement",
+    "subtitle": "Divertissement Live Premium",
+    "description": "Orchestre et services DJ de classe mondiale pour événements corporatifs, célébrations religieuses et occasions privées.",
+    "cta": {
+      "primary": "Demander un Devis",
+      "secondary": "Voir la Galerie"
+    }
+  },
+  "services": {
+    "title": "Nos Services",
+    "subtitle": "Un divertissement sur mesure pour chaque occasion",
+    "corporate": {
+      "title": "Événements Corporatifs",
+      "shortDescription": "Rehaussez vos événements d'entreprise avec un divertissement live sophistiqué.",
+      "description": "Des galas et cérémonies de remise de prix aux lancements de produits et célébrations d'entreprise, nous créons l'ambiance parfaite pour vos événements corporatifs. Nos musiciens polyvalents s'adaptent à toute atmosphère, garantissant que votre événement laisse une impression durable.",
+      "features": [
+        "Playlists personnalisées pour votre marque",
+        "Son et éclairage professionnels",
+        "Coordination parfaite avec les organisateurs",
+        "De l'ambiance musicale au divertissement énergique"
+      ]
+    },
+    "barMitzvahs": {
+      "title": "Bar & Bat Mitzvahs",
+      "shortDescription": "Célébrez cette étape importante avec une musique et une énergie inoubliables.",
+      "description": "Nous nous spécialisons dans la création de célébrations magiques de Bar et Bat Mitzvah qui honorent la tradition tout en apportant une excitation moderne. Notre équipe expérimentée sait exactement comment engager les invités de tous âges et faire sentir l'honoré comme une star.",
+      "features": [
+        "Musique traditionnelle et contemporaine",
+        "Animation interactive pour tous les âges",
+        "Musique personnalisée pour la hora et l'allumage des bougies",
+        "Sets de danse haute énergie"
+      ]
+    },
+    "privateEvents": {
+      "title": "Événements Privés",
+      "shortDescription": "Rendez vos moments spéciaux vraiment extraordinaires.",
+      "description": "Qu'il s'agisse d'un mariage, d'un anniversaire, d'une étape importante ou d'une réunion intime, nous apportons chaleur et sophistication à votre célébration. Notre approche personnalisée garantit que chaque détail reflète votre vision unique.",
+      "features": [
+        "Sélections musicales personnalisées",
+        "Événements intimes à grande échelle",
+        "Musique de cérémonie et de réception",
+        "Répertoire couvrant tous les genres"
+      ]
+    },
+    "viewDetails": "Voir les Détails"
+  },
+  "stats": {
+    "events": "Événements Organisés",
+    "clients": "Clients Satisfaits",
+    "years": "Années d'Expérience"
+  },
+  "about": {
+    "title": "Notre Histoire",
+    "subtitle": "Passion pour la Musique, Dévouement à l'Excellence",
+    "description": "Soulmates Orchestra est né d'une passion pour la musique et d'un dévouement à créer des moments inoubliables. Avec des années d'expérience dans les lieux les plus prestigieux, nous avons perfectionné l'art de lire la salle et de livrer exactement ce dont chaque événement a besoin.",
+    "mission": {
+      "title": "Notre Mission",
+      "description": "Transformer chaque événement en une expérience extraordinaire grâce à la puissance de la musique live, rassembler les gens et créer des souvenirs qui durent toute une vie."
+    },
+    "values": {
+      "title": "Ce Qui Nous Distingue",
+      "items": [
+        {
+          "title": "Excellence Musicale",
+          "description": "Nos musiciens sont des professionnels formés au conservatoire avec des décennies d'expérience combinée."
+        },
+        {
+          "title": "Polyvalence",
+          "description": "De l'élégance classique aux succès contemporains, nous nous adaptons parfaitement à tout style musical."
+        },
+        {
+          "title": "Personnalisation",
+          "description": "Chaque événement est unique, et nous travaillons étroitement avec vous pour créer une expérience sur mesure."
+        },
+        {
+          "title": "Fiabilité",
+          "description": "Professionnels, ponctuels et préparés - nous gérons chaque détail pour que vous puissiez profiter de votre événement."
+        }
+      ]
+    }
+  },
+  "gallery": {
+    "title": "Galerie",
+    "subtitle": "Les Moments Que Nous Avons Créés",
+    "categories": {
+      "all": "Tous",
+      "corporate": "Corporatif",
+      "celebrations": "Célébrations",
+      "private": "Événements Privés"
+    }
+  },
+  "contact": {
+    "title": "Contactez-Nous",
+    "subtitle": "Créons ensemble quelque chose d'extraordinaire",
+    "description": "Prêt à sublimer votre événement? Remplissez le formulaire ci-dessous et nous vous répondrons dans les 24 heures.",
+    "form": {
+      "name": "Nom Complet",
+      "namePlaceholder": "Entrez votre nom complet",
+      "email": "Adresse Email",
+      "emailPlaceholder": "votre@email.com",
+      "phone": "Numéro de Téléphone",
+      "phonePlaceholder": "+1 (555) 000-0000",
+      "company": "Entreprise (Optionnel)",
+      "companyPlaceholder": "Nom de votre entreprise",
+      "eventType": "Type d'Événement",
+      "eventTypePlaceholder": "Sélectionnez le type d'événement",
+      "eventTypes": {
+        "corporate": "Événement Corporatif",
+        "barMitzvah": "Bar/Bat Mitzvah",
+        "private": "Événement Privé",
+        "other": "Autre"
+      },
+      "eventDate": "Date de l'Événement",
+      "guestCount": "Nombre d'Invités",
+      "guestCountPlaceholder": "Nombre estimé d'invités",
+      "message": "Message",
+      "messagePlaceholder": "Parlez-nous de votre vision pour l'événement...",
+      "submit": "Envoyer la Demande",
+      "submitting": "Envoi en cours...",
+      "success": "Merci! Nous vous contacterons bientôt.",
+      "error": "Une erreur s'est produite. Veuillez réessayer."
+    },
+    "info": {
+      "email": "Email",
+      "phone": "Téléphone",
+      "location": "Emplacement",
+      "locationValue": "Montréal, Québec"
+    }
+  },
+  "footer": {
+    "tagline": "Créer des moments inoubliables grâce à la puissance de la musique live.",
+    "quickLinks": "Liens Rapides",
+    "connect": "Connectez-vous",
+    "copyright": "Tous droits réservés.",
+    "social": {
+      "instagram": "Instagram",
+      "youtube": "YouTube",
+      "tiktok": "TikTok",
+      "facebook": "Facebook"
+    }
+  },
+  "metadata": {
+    "home": {
+      "title": "Soulmates Orchestra | Divertissement Live Premium",
+      "description": "Orchestre et services DJ de classe mondiale pour événements corporatifs, bar/bat mitzvahs et célébrations privées à Montréal."
+    },
+    "services": {
+      "title": "Nos Services | Soulmates Orchestra",
+      "description": "Découvrez nos services de divertissement sur mesure pour événements corporatifs, célébrations religieuses et occasions privées."
+    },
+    "corporate": {
+      "title": "Événements Corporatifs | Soulmates Orchestra",
+      "description": "Rehaussez vos événements d'entreprise avec un divertissement live sophistiqué de Soulmates Orchestra."
+    },
+    "barMitzvahs": {
+      "title": "Bar & Bat Mitzvahs | Soulmates Orchestra",
+      "description": "Célébrez avec une musique et une énergie inoubliables. Spécialistes des célébrations Bar et Bat Mitzvah."
+    },
+    "privateEvents": {
+      "title": "Événements Privés | Soulmates Orchestra",
+      "description": "Rendez vos moments spéciaux extraordinaires avec un divertissement live personnalisé."
+    },
+    "about": {
+      "title": "À Propos | Soulmates Orchestra",
+      "description": "Découvrez notre passion pour la musique et notre dévouement à créer des moments inoubliables."
+    },
+    "gallery": {
+      "title": "Galerie | Soulmates Orchestra",
+      "description": "Parcourez notre portfolio d'événements et performances mémorables."
+    },
+    "contact": {
+      "title": "Nous Contacter | Soulmates Orchestra",
+      "description": "Contactez-nous pour discuter de votre événement. Nous vous aiderons à créer une expérience inoubliable."
+    }
+  }
+}

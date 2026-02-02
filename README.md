@@ -1,36 +1,138 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Soulmates Orchestra Website
+
+A modern, high-performance bilingual (EN/FR) website for Soulmates Orchestra - premium live entertainment for corporate events, religious celebrations, and private occasions.
+
+## Tech Stack
+
+- **Framework**: Next.js 15 with App Router (SSG for performance + SEO)
+- **Styling**: Tailwind CSS v4
+- **Animations**: Framer Motion
+- **Forms**: React Hook Form + Zod validation
+- **Email**: Resend API
+- **i18n**: next-intl for bilingual EN/FR support
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
+
+- Node.js 18+
+- npm or yarn
+
+### Installation
 
 ```bash
+# Install dependencies
+npm install
+
+# Copy environment variables
+cp .env.example .env.local
+
+# Run development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) to view the site.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Environment Variables
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```env
+RESEND_API_KEY=re_xxxxxxxxx        # Required for contact form emails
+CONTACT_EMAIL=your@email.com       # Recipient for contact form submissions
+```
 
-## Learn More
+## Project Structure
 
-To learn more about Next.js, take a look at the following resources:
+```
+soulmates/
+├── src/
+│   ├── app/
+│   │   ├── [locale]/              # Locale-based routing (en/fr)
+│   │   │   ├── services/          # Service pages
+│   │   │   ├── about/             # About page
+│   │   │   ├── gallery/           # Gallery with lightbox
+│   │   │   └── contact/           # Contact form
+│   │   ├── api/contact/           # Contact form API
+│   │   ├── globals.css            # Design system
+│   │   ├── sitemap.ts             # Auto-generated sitemap
+│   │   └── robots.ts              # Robots configuration
+│   ├── components/
+│   │   ├── layout/                # Header, Footer, LanguageSwitcher
+│   │   ├── ui/                    # Button, Card, Input
+│   │   ├── sections/              # Hero, ServicesGrid, Stats, etc.
+│   │   ├── forms/                 # ContactForm
+│   │   └── seo/                   # StructuredData
+│   ├── i18n/                      # Internationalization config
+│   ├── lib/                       # Utils, constants, animations
+│   └── messages/                  # Translation files (en.json, fr.json)
+└── public/images/                 # Static images
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Features
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- **Bilingual Support**: Full EN/FR translation with URL prefixes
+- **Dark Elegant Theme**: Black/gold color scheme
+- **Animated Sections**: Scroll-triggered animations via Framer Motion
+- **Gallery with Lightbox**: Masonry grid with category filtering
+- **Contact Form**: Validation, honeypot spam protection, email notifications
+- **SEO Optimized**: Structured data (JSON-LD), sitemap, robots.txt
 
-## Deploy on Vercel
+## Site Routes
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+| English | French | Page |
+|---------|--------|------|
+| `/en` | `/fr` | Home |
+| `/en/services` | `/fr/services` | Services Hub |
+| `/en/services/corporate` | `/fr/services/entreprises` | Corporate Events |
+| `/en/services/bar-mitzvahs` | `/fr/services/bar-mitzvahs` | Bar/Bat Mitzvahs |
+| `/en/services/private-events` | `/fr/services/evenements-prives` | Private Events |
+| `/en/about` | `/fr/a-propos` | About |
+| `/en/gallery` | `/fr/galerie` | Gallery |
+| `/en/contact` | `/fr/contact` | Contact |
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Development
+
+```bash
+# Development server
+npm run dev
+
+# Production build
+npm run build
+
+# Start production server
+npm start
+
+# Lint code
+npm run lint
+```
+
+## Deployment
+
+Deploy to Vercel with one click:
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/your-repo/soulmates)
+
+### Required Environment Variables on Vercel
+
+1. `RESEND_API_KEY` - Get from [Resend](https://resend.com)
+2. `CONTACT_EMAIL` - Email for receiving contact form submissions
+
+## Design System
+
+### Colors
+
+| Name | Hex | Usage |
+|------|-----|-------|
+| Gold | `#C9A962` | Primary/accent |
+| Background | `#0A0A0A` | Main background |
+| Surface | `#1A1A1A` | Cards/sections |
+| Text | `#FAFAFA` | Primary text |
+| Muted | `#A1A1A1` | Secondary text |
+
+### Typography
+
+- **Headlines**: Playfair Display (serif)
+- **Body**: Inter (sans-serif)
+
+## License
+
+Private - All rights reserved.
