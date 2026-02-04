@@ -15,7 +15,7 @@ const Card = forwardRef<HTMLDivElement, CardProps>(
     const variants = {
       default: "bg-[#1A1A1A]",
       glass: "glass",
-      outlined: "bg-transparent border border-[#C9A962]/20",
+      outlined: "bg-transparent border border-[#5B2D8A]/20",
     };
 
     return (
@@ -24,7 +24,7 @@ const Card = forwardRef<HTMLDivElement, CardProps>(
         className={cn(
           "rounded-2xl p-6 transition-colors duration-300",
           variants[variant],
-          hover && "hover:border-[#C9A962]/40",
+          hover && "hover:border-[#5B2D8A]/40",
           className
         )}
         variants={hover ? cardHoverVariants : undefined}
@@ -52,7 +52,7 @@ const CardTitle = forwardRef<HTMLHeadingElement, React.HTMLAttributes<HTMLHeadin
     <h3
       ref={ref}
       className={cn(
-        "text-xl font-semibold text-[#FAFAFA] font-[family-name:var(--font-playfair)]",
+        "text-xl font-semibold text-[#FAFAFA] ",
         className
       )}
       {...props}

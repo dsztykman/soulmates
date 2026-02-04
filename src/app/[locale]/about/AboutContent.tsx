@@ -40,12 +40,12 @@ export function AboutContent() {
                 />
               </div>
               {/* Decorative element */}
-              <div className="absolute -bottom-6 -right-6 w-48 h-48 rounded-2xl bg-[#C9A962]/10 border border-[#C9A962]/30 -z-10" />
+              <div className="absolute -bottom-6 -right-6 w-48 h-48 rounded-2xl bg-[#5B2D8A]/10 border border-[#5B2D8A]/30 -z-10" />
             </motion.div>
 
             {/* Content */}
             <motion.div variants={fadeRight}>
-              <h2 className="text-3xl sm:text-4xl font-bold font-[family-name:var(--font-playfair)] text-[#FAFAFA] mb-6">
+              <h2 className="text-3xl sm:text-4xl font-bold  text-[#FAFAFA] mb-6">
                 {t("title")}
               </h2>
               <p className="text-[#A1A1A1] text-lg leading-relaxed mb-8">
@@ -54,7 +54,7 @@ export function AboutContent() {
 
               {/* Mission */}
               <div className="p-6 rounded-2xl bg-[#1A1A1A] border border-[#252525]">
-                <h3 className="text-xl font-semibold text-[#C9A962] mb-3 font-[family-name:var(--font-playfair)]">
+                <h3 className="text-xl font-semibold text-[#5B2D8A] mb-3 ">
                   {t("mission.title")}
                 </h3>
                 <p className="text-[#A1A1A1]">{t("mission.description")}</p>
@@ -74,7 +74,7 @@ export function AboutContent() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-3xl sm:text-4xl font-bold font-[family-name:var(--font-playfair)] text-[#FAFAFA]">
+            <h2 className="text-3xl sm:text-4xl font-bold  text-[#FAFAFA]">
               {t("values.title")}
             </h2>
           </motion.div>
@@ -90,12 +90,12 @@ export function AboutContent() {
               const Icon = valueIcons[index];
               return (
                 <motion.div key={index} variants={staggerItem}>
-                  <Card className="h-full text-center border border-[#252525] hover:border-[#C9A962]/50">
+                  <Card className="h-full text-center border border-[#252525] hover:border-[#5B2D8A]/50">
                     <CardContent className="p-8">
-                      <div className="w-14 h-14 rounded-xl bg-[#C9A962]/10 flex items-center justify-center mx-auto mb-6">
-                        <Icon size={28} className="text-[#C9A962]" />
+                      <div className="w-14 h-14 rounded-xl bg-[#5B2D8A]/10 flex items-center justify-center mx-auto mb-6">
+                        <Icon size={28} className="text-[#5B2D8A]" />
                       </div>
-                      <h3 className="text-lg font-semibold text-[#FAFAFA] mb-3 font-[family-name:var(--font-playfair)]">
+                      <h3 className="text-lg font-semibold text-[#FAFAFA] mb-3 ">
                         {value.title}
                       </h3>
                       <p className="text-[#A1A1A1] text-sm">

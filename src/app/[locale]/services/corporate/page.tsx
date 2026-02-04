@@ -2,7 +2,7 @@ import { setRequestLocale, getTranslations } from "next-intl/server";
 import { Metadata } from "next";
 import { ServiceHero } from "../ServiceHero";
 import { ServiceDetail } from "../ServiceDetail";
-import { CTA } from "@/components/sections";
+import { ClientLogos, CTA } from "@/components/sections";
 
 type Props = {
   params: Promise<{ locale: string }>;
@@ -26,6 +26,7 @@ export default async function CorporatePage({ params }: Props) {
     <>
       <ServiceHero type="corporate" />
       <ServiceDetail type="corporate" />
+      <ClientLogos />
       <CTA />
     </>
   );

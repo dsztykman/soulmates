@@ -41,7 +41,7 @@ export function Hero() {
         {/* Subtitle */}
         <motion.p
           variants={heroTextVariants}
-          className="text-[#C9A962] text-sm sm:text-base uppercase tracking-[0.3em] mb-6"
+          className="text-[#5B2D8A] text-sm sm:text-base uppercase tracking-[0.3em] mb-6"
         >
           {t("subtitle")}
         </motion.p>
@@ -49,12 +49,12 @@ export function Hero() {
         {/* Main Title */}
         <motion.h1
           variants={heroTextVariants}
-          className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold font-[family-name:var(--font-playfair)] text-[#FAFAFA] mb-6 leading-tight"
+          className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold  text-[#FAFAFA] mb-6 leading-tight"
         >
           {t("title").split(" ").map((word, i) => (
             <span key={i} className="inline-block">
               {i === 1 ? (
-                <span className="text-gradient-gold">{word}</span>
+                <span className="text-gradient-primary">{word}</span>
               ) : (
                 word
               )}
@@ -106,9 +106,9 @@ export function Hero() {
             <Link
               key={service.href}
               href={service.href as "/services/corporate" | "/services/bar-mitzvahs" | "/services/private-events"}
-              className="group p-4 rounded-xl glass border border-[#C9A962]/20 hover:border-[#C9A962]/60 transition-all duration-300"
+              className="group p-4 rounded-xl glass border border-[#5B2D8A]/20 hover:border-[#5B2D8A]/60 transition-all duration-300"
             >
-              <span className="text-sm text-[#A1A1A1] group-hover:text-[#C9A962] transition-colors">
+              <span className="text-sm text-[#A1A1A1] group-hover:text-[#5B2D8A] transition-colors">
                 {service.labelKey === "corporate" && "Corporate Events"}
                 {service.labelKey === "barMitzvahs" && "Bar & Bat Mitzvahs"}
                 {service.labelKey === "privateEvents" && "Private Events"}
@@ -128,9 +128,9 @@ export function Hero() {
         <motion.div
           animate={{ y: [0, 8, 0] }}
           transition={{ repeat: Infinity, duration: 2, ease: "easeInOut" }}
-          className="w-6 h-10 rounded-full border-2 border-[#C9A962]/50 flex items-start justify-center p-2"
+          className="w-6 h-10 rounded-full border-2 border-[#5B2D8A]/50 flex items-start justify-center p-2"
         >
-          <motion.div className="w-1.5 h-1.5 rounded-full bg-[#C9A962]" />
+          <motion.div className="w-1.5 h-1.5 rounded-full bg-[#5B2D8A]" />
         </motion.div>
       </motion.div>
     </section>

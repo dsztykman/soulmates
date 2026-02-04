@@ -24,8 +24,8 @@ export function CTA() {
       </div>
 
       {/* Decorative Elements */}
-      <div className="absolute top-0 left-0 w-64 h-64 bg-[#C9A962]/10 rounded-full blur-3xl" />
-      <div className="absolute bottom-0 right-0 w-96 h-96 bg-[#8B5CF6]/10 rounded-full blur-3xl" />
+      <div className="absolute top-0 left-0 w-64 h-64 bg-[#5B2D8A]/10 rounded-full blur-3xl" />
+      <div className="absolute bottom-0 right-0 w-96 h-96 bg-[#C9A96A]/10 rounded-full blur-3xl" />
 
       <motion.div
         variants={staggerContainer}
@@ -37,17 +37,17 @@ export function CTA() {
         <div className="max-w-3xl mx-auto text-center">
           <motion.div
             variants={fadeUp}
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#C9A962]/10 border border-[#C9A962]/30 mb-8"
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#5B2D8A]/10 border border-[#5B2D8A]/30 mb-8"
           >
-            <Mail size={16} className="text-[#C9A962]" />
-            <span className="text-sm text-[#C9A962]">
+            <Mail size={16} className="text-[#5B2D8A]" />
+            <span className="text-sm text-[#5B2D8A]">
               {t("contact.description")}
             </span>
           </motion.div>
 
           <motion.h2
             variants={fadeUp}
-            className="text-3xl sm:text-4xl md:text-5xl font-bold font-[family-name:var(--font-playfair)] text-[#FAFAFA] mb-6"
+            className="text-3xl sm:text-4xl md:text-5xl font-bold  text-[#FAFAFA] mb-6"
           >
             {t("contact.subtitle")}
           </motion.h2>

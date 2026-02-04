@@ -50,12 +50,12 @@ export async function POST(request: NextRequest) {
           <style>
             body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; }
             .container { max-width: 600px; margin: 0 auto; padding: 20px; }
-            .header { background: linear-gradient(135deg, #C9A962 0%, #A88B4A 100%); color: #0A0A0A; padding: 20px; text-align: center; border-radius: 8px 8px 0 0; }
+            .header { background: linear-gradient(135deg, #5B2D8A 0%, #4A2470 100%); color: #FAFAFA; padding: 20px; text-align: center; border-radius: 8px 8px 0 0; }
             .content { background: #f9f9f9; padding: 20px; border-radius: 0 0 8px 8px; }
             .field { margin-bottom: 15px; }
             .label { font-weight: bold; color: #666; font-size: 12px; text-transform: uppercase; }
             .value { margin-top: 4px; color: #333; }
-            .message-box { background: white; padding: 15px; border-radius: 8px; border-left: 4px solid #C9A962; }
+            .message-box { background: white; padding: 15px; border-radius: 8px; border-left: 4px solid #5B2D8A; }
           </style>
         </head>
         <body>
@@ -127,11 +127,11 @@ export async function POST(request: NextRequest) {
             body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; background: #0A0A0A; }
             .container { max-width: 600px; margin: 0 auto; padding: 20px; }
             .card { background: #1A1A1A; border-radius: 12px; overflow: hidden; }
-            .header { background: linear-gradient(135deg, #C9A962 0%, #A88B4A 100%); padding: 30px; text-align: center; }
-            .header h1 { color: #0A0A0A; margin: 0; font-size: 24px; }
+            .header { background: linear-gradient(135deg, #5B2D8A 0%, #4A2470 100%); padding: 30px; text-align: center; }
+            .header h1 { color: #FAFAFA; margin: 0; font-size: 24px; }
             .content { padding: 30px; color: #FAFAFA; }
             .content p { margin-bottom: 15px; color: #A1A1A1; }
-            .highlight { color: #C9A962; }
+            .highlight { color: #5B2D8A; }
             .footer { padding: 20px 30px; border-top: 1px solid #252525; text-align: center; color: #6B6B6B; font-size: 14px; }
           </style>
         </head>

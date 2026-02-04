@@ -1,18 +1,9 @@
 import type { Metadata } from "next";
-import { Inter, Playfair_Display } from "next/font/google";
 import "./globals.css";
 
-const inter = Inter({
-  subsets: ["latin"],
-  display: "swap",
-  variable: "--font-inter",
-});
-
-const playfair = Playfair_Display({
-  subsets: ["latin"],
-  display: "swap",
-  variable: "--font-playfair",
-});
+// Using system Avenir font stack - Avenir is available on macOS and iOS
+// Falls back to Avenir Next (also a system font) and then system-ui
+const avenirFontClass = "font-avenir";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.soulmatesorchestra.com"),
@@ -76,8 +67,8 @@ export const metadata: Metadata = {
   },
 };
 
-// Font classes exported for use in locale layout
-export const fontVariables = `${inter.variable} ${playfair.variable}`;
+// Font class exported for use in locale layout
+export const fontVariables = avenirFontClass;
 
 export default function RootLayout({
   children,

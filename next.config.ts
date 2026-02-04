@@ -15,6 +15,10 @@ const nextConfig: NextConfig = {
         protocol: "https",
         hostname: "www.soulmatesorchestra.com",
       },
+      {
+        protocol: "https",
+        hostname: "vumbnail.com",
+      },
     ],
   },
 };

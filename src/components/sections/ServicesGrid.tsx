@@ -43,13 +43,13 @@ export function ServicesGrid() {
         >
           <motion.p
             variants={fadeUp}
-            className="text-[#C9A962] text-sm uppercase tracking-[0.3em] mb-4"
+            className="text-[#5B2D8A] text-sm uppercase tracking-[0.3em] mb-4"
           >
             {t("subtitle")}
           </motion.p>
           <motion.h2
             variants={fadeUp}
-            className="text-3xl sm:text-4xl md:text-5xl font-bold font-[family-name:var(--font-playfair)] text-[#FAFAFA]"
+            className="text-3xl sm:text-4xl md:text-5xl font-bold  text-[#FAFAFA]"
           >
             {t("title")}
           </motion.h2>
@@ -65,7 +65,7 @@ export function ServicesGrid() {
           {services.map((service) => (
             <motion.div key={service.key} variants={staggerItem}>
               <Link href={service.href as "/services/corporate" | "/services/bar-mitzvahs" | "/services/private-events"} className="block h-full">
-                <Card className="h-full group relative overflow-hidden border border-[#252525] hover:border-[#C9A962]/50">
+                <Card className="h-full group relative overflow-hidden border border-[#252525] hover:border-[#5B2D8A]/50">
                   {/* Background Gradient */}
                   <div
                     className={`absolute inset-0 bg-gradient-to-br ${service.gradient} opacity-0 group-hover:opacity-100 transition-opacity duration-500`}
@@ -73,15 +73,15 @@ export function ServicesGrid() {
 
                   <CardContent className="relative z-10 p-8">
                     {/* Icon */}
-                    <div className="w-14 h-14 rounded-xl bg-[#C9A962]/10 flex items-center justify-center mb-6 group-hover:bg-[#C9A962] group-hover:text-[#0A0A0A] transition-all duration-300">
+                    <div className="w-14 h-14 rounded-xl bg-[#5B2D8A]/10 flex items-center justify-center mb-6 group-hover:bg-[#5B2D8A] group-hover:text-[#0A0A0A] transition-all duration-300">
                       <service.icon
                         size={28}
-                        className="text-[#C9A962] group-hover:text-[#0A0A0A] transition-colors"
+                        className="text-[#5B2D8A] group-hover:text-[#0A0A0A] transition-colors"
                       />
                     </div>
 
                     {/* Title */}
-                    <h3 className="text-xl font-semibold text-[#FAFAFA] mb-3 font-[family-name:var(--font-playfair)]">
+                    <h3 className="text-xl font-semibold text-[#FAFAFA] mb-3 ">
                       {t(`${service.key}.title`)}
                     </h3>
 
@@ -91,7 +91,7 @@ export function ServicesGrid() {
                     </p>
 
                     {/* Link */}
-                    <span className="inline-flex items-center text-[#C9A962] font-medium group-hover:gap-2 transition-all">
+                    <span className="inline-flex items-center text-[#5B2D8A] font-medium group-hover:gap-2 transition-all">
                       {t("viewDetails")}
                       <ArrowRight
                         size={16}

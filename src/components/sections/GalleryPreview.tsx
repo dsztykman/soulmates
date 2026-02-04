@@ -25,13 +25,13 @@ export function GalleryPreview() {
         >
           <motion.p
             variants={fadeUp}
-            className="text-[#C9A962] text-sm uppercase tracking-[0.3em] mb-4"
+            className="text-[#5B2D8A] text-sm uppercase tracking-[0.3em] mb-4"
           >
             {t("gallery.subtitle")}
           </motion.p>
           <motion.h2
             variants={fadeUp}
-            className="text-3xl sm:text-4xl md:text-5xl font-bold font-[family-name:var(--font-playfair)] text-[#FAFAFA]"
+            className="text-3xl sm:text-4xl md:text-5xl font-bold  text-[#FAFAFA]"
           >
             {t("gallery.title")}
           </motion.h2>

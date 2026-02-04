@@ -98,6 +98,10 @@
   "gallery": {
     "title": "Galerie",
     "subtitle": "Les Moments Que Nous Avons Créés",
+    "tabs": {
+      "photos": "Photos",
+      "videos": "Vidéos"
+    },
     "categories": {
       "all": "Tous",
       "corporate": "Corporatif",
@@ -144,12 +148,27 @@
       "locationValue": "Paris, France"
     }
   },
+  "videos": {
+    "title": "Découvrez-Nous en Action",
+    "subtitle": "Vidéos Highlights",
+    "description": "Vivez l'énergie et l'élégance de nos performances à travers ces moments forts.",
+    "titles": {
+      "featured": "Moments Forts de Nos Performances",
+      "video1": "Performance Gala Corporatif",
+      "video2": "Moments de Célébration",
+      "video3": "Événement Privé en Vedette"
+    },
+    "watchMore": "Voir Plus de Vidéos"
+  },
   "instagram": {
     "title": "Suivez Notre Aventure",
     "subtitle": "Les coulisses, moments live et célébrations inoubliables.",
     "followUs": "Suivez-nous sur Instagram",
     "followButton": "Suivre sur Instagram",
     "viewPost": "Voir sur Instagram"
+  },
+  "clients": {
+    "title": "Ils Nous Font Confiance"
   },
   "footer": {
     "tagline": "Créer des moments inoubliables grâce à la puissance de la musique live.",

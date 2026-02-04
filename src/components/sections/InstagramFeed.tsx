@@ -105,7 +105,18 @@ function BeholdWidget({ feedId }: { feedId: string }) {
     }
   }, [feedId]);
 
-  return <div ref={containerRef} />;
+  return (
+    <div
+      ref={containerRef}
+      className="behold-container rounded-2xl overflow-hidden"
+      style={{
+        // CSS custom properties for Behold widget customization
+        // @ts-expect-error - CSS custom properties
+        "--behold-gap": "12px",
+        "--behold-border-radius": "12px",
+      }}
+    />
+  );
 }
 
 // Placeholder Grid Component
@@ -150,85 +161,17 @@ function PlaceholderGrid() {
 }
 
 export function InstagramFeed() {
-  const t = useTranslations("instagram");
-
   return (
-    <section className="section-padding bg-[#1A1A1A]">
-      <div className="container mx-auto px-4">
-        {/* Header */}
-        <motion.div
-          variants={staggerContainer}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: "-100px" }}
-          className="text-center mb-12"
-        >
-          <motion.div
-            variants={fadeUp}
-            className="inline-flex items-center gap-3 mb-6"
-          >
-            <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-purple-500 via-pink-500 to-orange-400 flex items-center justify-center">
-              <Instagram size={24} className="text-white" />
-            </div>
-            <div className="text-left">
-              <p className="text-[#A1A1A1] text-sm">{t("followUs")}</p>
-              <a
-                href={SITE_CONFIG.social.instagram}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-[#FAFAFA] font-semibold hover:text-[#C9A962] transition-colors"
-              >
-                @{instagramHandle}
-              </a>
-            </div>
-          </motion.div>
-
-          <motion.h2
-            variants={fadeUp}
-            className="text-3xl sm:text-4xl md:text-5xl font-bold font-[family-name:var(--font-playfair)] text-[#FAFAFA] mb-4"
-          >
-            {t("title")}
-          </motion.h2>
-          <motion.p
-            variants={fadeUp}
-            className="text-[#A1A1A1] max-w-2xl mx-auto"
-          >
-            {t("subtitle")}
-          </motion.p>
-        </motion.div>
-
-        {/* Instagram Feed - Widget or Placeholder */}
-        <div className="mb-10">
-          {ELFSIGHT_WIDGET_ID ? (
-            <ElfsightWidget widgetId={ELFSIGHT_WIDGET_ID} />
-          ) : BEHOLD_FEED_ID ? (
-            <BeholdWidget feedId={BEHOLD_FEED_ID} />
-          ) : (
-            <PlaceholderGrid />
-          )}
+    <div className="w-full">
+      {ELFSIGHT_WIDGET_ID ? (
+        <ElfsightWidget widgetId={ELFSIGHT_WIDGET_ID} />
+      ) : BEHOLD_FEED_ID ? (
+        <BeholdWidget feedId={BEHOLD_FEED_ID} />
+      ) : (
+        <div className="container mx-auto px-4 py-12">
+          <PlaceholderGrid />
         </div>
-
-        {/* CTA */}
-        <motion.div
-          variants={fadeUp}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          className="text-center"
-        >
-          <a
-            href={SITE_CONFIG.social.instagram}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Button variant="outline" size="lg" className="group">
-              <Instagram size={20} className="mr-2" />
-              {t("followButton")}
-              <ExternalLink size={16} className="ml-2 opacity-50 group-hover:opacity-100 transition-opacity" />
-            </Button>
-          </a>
-        </motion.div>
-      </div>
-    </section>
+      )}
+    </div>
   );
 }

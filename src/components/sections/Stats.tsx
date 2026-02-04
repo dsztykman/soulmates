@@ -51,7 +51,7 @@ function StatItem({
 
   return (
     <motion.div variants={staggerItem} className="text-center">
-      <div className="text-5xl sm:text-6xl md:text-7xl font-bold font-[family-name:var(--font-playfair)] text-[#C9A962] mb-2">
+      <div className="text-5xl sm:text-6xl md:text-7xl font-bold  text-[#5B2D8A] mb-2">
         {count}
         <span className="text-4xl">{suffix}</span>
       </div>

@@ -2,10 +2,15 @@
 
 /* Design System - Elegant Dark Theme */
 :root {
-  /* Primary Colors */
-  --color-gold: #C9A962;
-  --color-gold-light: #D4B978;
-  --color-gold-dark: #A88B4A;
+  /* Primary Colors - Purple */
+  --color-primary: #5B2D8A;
+  --color-primary-light: #7B4DAA;
+  --color-primary-dark: #4A2470;
+
+  /* Secondary Colors - Beige */
+  --color-secondary: #C9A96A;
+  --color-secondary-light: #D9C08A;
+  --color-secondary-dark: #B8985A;
 
   /* Background Colors */
   --color-bg-primary: #0A0A0A;
@@ -17,12 +22,8 @@
   --color-text-secondary: #A1A1A1;
   --color-text-muted: #6B6B6B;
 
-  /* Accent Colors */
-  --color-accent: #8B5CF6;
-  --color-accent-light: #A78BFA;
-
   /* Gradients */
-  --gradient-gold: linear-gradient(135deg, #C9A962 0%, #D4B978 50%, #A88B4A 100%);
+  --gradient-primary: linear-gradient(135deg, #5B2D8A 0%, #7B4DAA 50%, #4A2470 100%);
   --gradient-dark: linear-gradient(180deg, #0A0A0A 0%, #1A1A1A 100%);
   --gradient-overlay: linear-gradient(180deg, rgba(10,10,10,0.8) 0%, rgba(10,10,10,0.4) 50%, rgba(10,10,10,0.8) 100%);
 
@@ -37,18 +38,25 @@
 
 @theme inline {
   /* Colors */
-  --color-gold: var(--color-gold);
-  --color-gold-light: var(--color-gold-light);
-  --color-gold-dark: var(--color-gold-dark);
+  --color-primary: var(--color-primary);
+  --color-primary-light: var(--color-primary-light);
+  --color-primary-dark: var(--color-primary-dark);
+  --color-secondary: var(--color-secondary);
+  --color-secondary-light: var(--color-secondary-light);
+  --color-secondary-dark: var(--color-secondary-dark);
   --color-background: var(--color-bg-primary);
   --color-foreground: var(--color-text-primary);
   --color-muted: var(--color-text-muted);
-  --color-secondary: var(--color-text-secondary);
-  --color-accent: var(--color-accent);
 
-  /* Fonts */
-  --font-sans: var(--font-inter);
-  --font-display: var(--font-playfair);
+  /* Fonts - Avenir system font stack */
+  --font-avenir: Avenir, "Avenir Next", -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+  --font-sans: var(--font-avenir);
+  --font-display: var(--font-avenir);
+}
+
+/* Font class for body */
+.font-avenir {
+  font-family: Avenir, "Avenir Next", -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
 }
 
 /* Base Styles */
@@ -63,7 +71,7 @@ html {
 body {
   background-color: var(--color-bg-primary);
   color: var(--color-text-primary);
-  font-family: var(--font-inter), system-ui, -apple-system, sans-serif;
+  font-family: var(--font-avenir), "Avenir Next", Avenir, system-ui, -apple-system, sans-serif;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -71,15 +79,15 @@ body {
 
 /* Typography */
 h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-playfair), Georgia, serif;
+  font-family: var(--font-avenir), "Avenir Next", Avenir, system-ui, -apple-system, sans-serif;
   font-weight: 600;
   line-height: 1.2;
 }
 
 /* Selection */
 ::selection {
-  background-color: var(--color-gold);
-  color: var(--color-bg-primary);
+  background-color: var(--color-primary);
+  color: var(--color-text-primary);
 }
 
 /* Scrollbar */
@@ -93,24 +101,24 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--color-gold-dark);
+  background: var(--color-primary-dark);
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--color-gold);
+  background: var(--color-primary);
 }
 
 /* Focus States */
 :focus-visible {
-  outline: 2px solid var(--color-gold);
+  outline: 2px solid var(--color-primary);
   outline-offset: 2px;
 }
 
 /* Custom Utilities */
 @layer utilities {
-  .text-gradient-gold {
-    background: var(--gradient-gold);
+  .text-gradient-primary {
+    background: var(--gradient-primary);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -151,12 +159,12 @@ h1, h2, h3, h4, h5, h6 {
   }
 
   /* Glow effects */
-  .glow-gold {
-    box-shadow: 0 0 20px rgba(201, 169, 98, 0.3);
+  .glow-primary {
+    box-shadow: 0 0 20px rgba(91, 45, 138, 0.3);
   }
 
-  .glow-gold-lg {
-    box-shadow: 0 0 40px rgba(201, 169, 98, 0.4);
+  .glow-primary-lg {
+    box-shadow: 0 0 40px rgba(91, 45, 138, 0.4);
   }
 }
 
@@ -211,4 +219,34 @@ h1, h2, h3, h4, h5, h6 {
   );
   background-size: 200% 100%;
   animation: shimmer 1.5s infinite;
+}
+
+/* Behold Instagram Widget Customization */
+.behold-container {
+  /* Container styling - minimal to let widget breathe */
+}
+
+.behold-container behold-widget {
+  display: block;
+  width: 100%;
+}
+
+/* Override Behold widget styles for dark theme */
+.behold-container behold-widget::part(grid) {
+  gap: 12px;
+}
+
+.behold-container behold-widget::part(post) {
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.behold-container behold-widget::part(post):hover {
+  transform: scale(1.02);
+  box-shadow: 0 8px 30px rgba(91, 45, 138, 0.3);
+}
+
+.behold-container behold-widget::part(image) {
+  border-radius: 12px;
 }

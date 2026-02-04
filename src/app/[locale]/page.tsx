@@ -1,5 +1,5 @@
 import { setRequestLocale } from "next-intl/server";
-import { Hero, ServicesGrid, Stats, GalleryPreview, InstagramFeed, CTA } from "@/components/sections";
+import { Hero, ServicesGrid, Stats, ClientLogos, VideoShowcase, GalleryPreview, InstagramFeed, CTA } from "@/components/sections";
 
 type Props = {
   params: Promise<{ locale: string }>;
@@ -12,10 +12,12 @@ export default async function HomePage({ params }: Props) {
   return (
     <>
       <Hero />
+      <InstagramFeed />
       <ServicesGrid />
       <Stats />
+      <ClientLogos />
+      <VideoShowcase />
       <GalleryPreview />
-      <InstagramFeed />
       <CTA />
     </>
   );

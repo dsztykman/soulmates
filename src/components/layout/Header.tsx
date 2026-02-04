@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { useTranslations } from "next-intl";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
+import Image from "next/image";
 import { Link, usePathname } from "@/i18n/navigation";
 import { LanguageSwitcher } from "./LanguageSwitcher";
 import { Button } from "@/components/ui";
@@ -51,13 +52,15 @@ export function Header() {
         <div className="container mx-auto px-4">
           <nav className="flex items-center justify-between">
             {/* Logo */}
-            <Link href="/" className="flex items-center gap-2 group">
-              <span className="text-2xl font-bold font-[family-name:var(--font-playfair)] text-gradient-gold">
-                Soulmates
-              </span>
-              <span className="text-sm text-[#A1A1A1] hidden sm:block group-hover:text-[#C9A962] transition-colors">
-                Orchestra
-              </span>
+            <Link href="/" className="flex items-center group">
+              <Image
+                src="/images/logo-purple-transparent.png"
+                alt="Soulmates"
+                width={200}
+                height={67}
+                className="h-16 sm:h-20 w-auto object-contain"
+                priority
+              />
             </Link>
 
             {/* Desktop Navigation */}
@@ -71,7 +74,7 @@ export function Header() {
                     className={cn(
                       "text-sm font-medium transition-colors duration-300 relative",
                       isActive
-                        ? "text-[#C9A962]"
+                        ? "text-[#5B2D8A]"
                         : "text-[#A1A1A1] hover:text-[#FAFAFA]"
                     )}
                   >
@@ -79,7 +82,7 @@ export function Header() {
                     {isActive && (
                       <motion.span
                         layoutId="activeNav"
-                        className="absolute -bottom-1 left-0 right-0 h-0.5 bg-[#C9A962]"
+                        className="absolute -bottom-1 left-0 right-0 h-0.5 bg-[#5B2D8A]"
                       />
                     )}
                   </Link>
@@ -97,7 +100,7 @@ export function Header() {
               {/* Mobile Menu Button */}
               <button
                 onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                className="lg:hidden p-2 text-[#FAFAFA] hover:text-[#C9A962] transition-colors"
+                className="lg:hidden p-2 text-[#FAFAFA] hover:text-[#5B2D8A] transition-colors"
                 aria-label="Toggle menu"
               >
                 {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -138,8 +141,8 @@ export function Header() {
                       className={cn(
                         "py-3 text-lg font-medium border-b border-[#252525] transition-colors",
                         isActive
-                          ? "text-[#C9A962] border-[#C9A962]"
-                          : "text-[#FAFAFA] hover:text-[#C9A962]"
+                          ? "text-[#5B2D8A] border-[#5B2D8A]"
+                          : "text-[#FAFAFA] hover:text-[#5B2D8A]"
                       )}
                     >
                       {t(link.labelKey)}

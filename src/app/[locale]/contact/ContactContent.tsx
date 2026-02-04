@@ -53,14 +53,14 @@ export function ContactContent() {
         >
           <motion.div
             variants={heroTextVariants}
-            className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-[#C9A962]/10 border border-[#C9A962]/30 mb-8"
+            className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-[#5B2D8A]/10 border border-[#5B2D8A]/30 mb-8"
           >
-            <MessageSquare size={32} className="text-[#C9A962]" />
+            <MessageSquare size={32} className="text-[#5B2D8A]" />
           </motion.div>
 
           <motion.h1
             variants={heroTextVariants}
-            className="text-4xl sm:text-5xl md:text-6xl font-bold font-[family-name:var(--font-playfair)] text-[#FAFAFA] mb-6"
+            className="text-4xl sm:text-5xl md:text-6xl font-bold  text-[#FAFAFA] mb-6"
           >
             {t("title")}
           </motion.h1>
@@ -86,22 +86,22 @@ export function ContactContent() {
               viewport={{ once: true }}
               className="lg:col-span-2"
             >
-              <h2 className="text-2xl sm:text-3xl font-bold font-[family-name:var(--font-playfair)] text-[#FAFAFA] mb-6">
+              <h2 className="text-2xl sm:text-3xl font-bold  text-[#FAFAFA] mb-6">
                 {t("description")}
               </h2>
 
               <div className="space-y-6 mb-10">
                 {contactInfo.map((info, index) => (
                   <div key={index} className="flex items-start gap-4">
-                    <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-[#C9A962]/10 flex items-center justify-center">
-                      <info.icon size={22} className="text-[#C9A962]" />
+                    <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-[#5B2D8A]/10 flex items-center justify-center">
+                      <info.icon size={22} className="text-[#5B2D8A]" />
                     </div>
                     <div>
                       <p className="text-sm text-[#A1A1A1] mb-1">{info.label}</p>
                       {info.href ? (
                         <a
                           href={info.href}
-                          className="text-[#FAFAFA] hover:text-[#C9A962] transition-colors"
+                          className="text-[#FAFAFA] hover:text-[#5B2D8A] transition-colors"
                         >
                           {info.value}
                         </a>

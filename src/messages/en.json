@@ -98,6 +98,10 @@
   "gallery": {
     "title": "Gallery",
     "subtitle": "Moments We've Created",
+    "tabs": {
+      "photos": "Photos",
+      "videos": "Videos"
+    },
     "categories": {
       "all": "All",
       "corporate": "Corporate",
@@ -144,12 +148,27 @@
       "locationValue": "Paris, France"
     }
   },
+  "videos": {
+    "title": "See Us in Action",
+    "subtitle": "Video Highlights",
+    "description": "Experience the energy and elegance of our performances through these highlights.",
+    "titles": {
+      "featured": "Live Performance Highlights",
+      "video1": "Corporate Gala Performance",
+      "video2": "Celebration Highlights",
+      "video3": "Private Event Showcase"
+    },
+    "watchMore": "Watch More Videos"
+  },
   "instagram": {
     "title": "Follow Our Journey",
     "subtitle": "Behind the scenes, live moments, and unforgettable celebrations.",
     "followUs": "Follow us on Instagram",
     "followButton": "Follow on Instagram",
     "viewPost": "View on Instagram"
+  },
+  "clients": {
+    "title": "Trusted by Leading Brands"
   },
   "footer": {
     "tagline": "Creating unforgettable moments through the power of live music.",

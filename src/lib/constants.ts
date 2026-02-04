@@ -21,76 +21,123 @@ export const STATS = {
 export const GALLERY_IMAGES = [
   {
     id: 1,
-    src: "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=800&q=80",
-    alt: "Orchestra performance at gala",
+    src: "/images/gallery/event-1.jpg",
+    alt: "Live performance at event",
     category: "corporate",
   },
   {
     id: 2,
-    src: "https://images.unsplash.com/photo-1519741497674-611481863552?w=800&q=80",
-    alt: "Wedding celebration",
+    src: "/images/gallery/event-2.jpg",
+    alt: "Celebration moment",
     category: "private",
   },
   {
     id: 3,
-    src: "https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?w=800&q=80",
-    alt: "Corporate event entertainment",
+    src: "/images/gallery/event-3.jpg",
+    alt: "Orchestra performance",
     category: "corporate",
   },
   {
     id: 4,
-    src: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=800&q=80",
+    src: "/images/gallery/event-4.jpg",
     alt: "Party celebration",
     category: "celebrations",
   },
   {
     id: 5,
-    src: "https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?w=800&q=80",
-    alt: "Live band performance",
+    src: "/images/gallery/event-5.jpg",
+    alt: "Live entertainment",
     category: "corporate",
   },
   {
     id: 6,
-    src: "https://images.unsplash.com/photo-1527529482837-4698179dc6ce?w=800&q=80",
-    alt: "Celebration dinner",
+    src: "/images/gallery/event-6.jpg",
+    alt: "Special event",
     category: "celebrations",
   },
   {
     id: 7,
-    src: "https://images.unsplash.com/photo-1501281668745-f7f57925c3b4?w=800&q=80",
-    alt: "Concert lighting",
+    src: "/images/gallery/event-7.jpg",
+    alt: "Event performance",
     category: "corporate",
   },
   {
     id: 8,
-    src: "https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?w=800&q=80",
-    alt: "Dance floor celebration",
+    src: "/images/gallery/event-8.jpg",
+    alt: "Celebration event",
     category: "private",
   },
   {
     id: 9,
-    src: "https://images.unsplash.com/photo-1429962714451-bb934ecdc4ec?w=800&q=80",
+    src: "/images/gallery/event-9.jpg",
     alt: "Bar Mitzvah celebration",
     category: "celebrations",
   },
   {
     id: 10,
-    src: "https://images.unsplash.com/photo-1504680177321-2e6a879aac86?w=800&q=80",
-    alt: "DJ setup",
+    src: "/images/gallery/event-10.jpg",
+    alt: "DJ performance",
     category: "private",
   },
   {
     id: 11,
-    src: "https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?w=800&q=80",
+    src: "/images/gallery/event-11.jpg",
     alt: "Musicians performing",
     category: "corporate",
   },
   {
     id: 12,
-    src: "https://images.unsplash.com/photo-1478147427282-58a87a120781?w=800&q=80",
-    alt: "Elegant venue",
+    src: "/images/gallery/event-12.jpg",
+    alt: "Event venue",
     category: "private",
   },
 ] as const;
 
 export type GalleryCategory = "all" | "corporate" | "celebrations" | "private";
+
+export const VIDEOS = [
+  {
+    id: "291123424",
+    titleKey: "video1",
+    category: "corporate",
+  },
+  {
+    id: "651502970",
+    titleKey: "video2",
+    category: "celebrations",
+  },
+  {
+    id: "291534836",
+    titleKey: "video3",
+    category: "private",
+  },
+] as const;
+
+// Video assignments for service pages
+export const SERVICE_VIDEOS = {
+  corporate: "291123424",
+  barMitzvahs: "651502970",
+  privateEvents: "291534836",
+} as const;
+
+// Corporate clients
+export const CORPORATE_CLIENTS = [
+  { name: "Hermès", url: "https://www.hermes.com" },
+  { name: "Chanel", url: "https://www.chanel.com" },
+  { name: "Schwarzkopf", url: "https://www.schwarzkopf.com" },
+  { name: "Sephora", url: "https://www.sephora.com" },
+  { name: "Reckitt Benckiser", url: "https://www.reckitt.com" },
+  { name: "Club Med", url: "https://www.clubmed.com" },
+  { name: "Éditis", url: "https://www.editis.com" },
+  { name: "FNAIM", url: "https://www.fnaim.fr" },
+  { name: "Guinot Mary Cohr", url: "https://www.guinot.com" },
+  { name: "Capgemini", url: "https://www.capgemini.com" },
+  { name: "La Poste", url: "https://www.laposte.fr" },
+  { name: "Sanofi", url: "https://www.sanofi.com" },
+  { name: "Vinci", url: "https://www.vinci.com" },
+  { name: "Milleis", url: "https://www.milleis.fr" },
+  { name: "Murex", url: "https://www.murex.com" },
+  { name: "Bacardi", url: "https://www.bacardi.com" },
+  { name: "Danone", url: "https://www.danone.com" },
+  { name: "SAP", url: "https://www.sap.com" },
+] as const;

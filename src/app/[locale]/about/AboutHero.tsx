@@ -30,14 +30,14 @@ export function AboutHero() {
       >
         <motion.div
           variants={heroTextVariants}
-          className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-[#C9A962]/10 border border-[#C9A962]/30 mb-8"
+          className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-[#5B2D8A]/10 border border-[#5B2D8A]/30 mb-8"
         >
-          <Users size={32} className="text-[#C9A962]" />
+          <Users size={32} className="text-[#5B2D8A]" />
         </motion.div>
 
         <motion.h1
           variants={heroTextVariants}
-          className="text-4xl sm:text-5xl md:text-6xl font-bold font-[family-name:var(--font-playfair)] text-[#FAFAFA] mb-6"
+          className="text-4xl sm:text-5xl md:text-6xl font-bold  text-[#FAFAFA] mb-6"
         >
           {t("title")}
         </motion.h1>
