@@ -19,6 +19,10 @@ COPY . .
 ENV NEXT_TELEMETRY_DISABLED=1
 ENV NODE_ENV=production
 
+# Build arguments for public environment variables
+ARG NEXT_PUBLIC_BEHOLD_FEED_ID
+ENV NEXT_PUBLIC_BEHOLD_FEED_ID=$NEXT_PUBLIC_BEHOLD_FEED_ID
+
 RUN npm run build
 
 # Stage 3: Production runner
