@@ -65,7 +65,8 @@ export function ContactForm() {
         eventDate: format(data.eventDate, "yyyy-MM-dd"),
       };
 
-      const response = await fetch("/api/contact", {
+      const apiUrl = process.env.NEXT_PUBLIC_CONTACT_API_URL || "/api/contact";
+      const response = await fetch(apiUrl, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
