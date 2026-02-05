@@ -33,15 +33,31 @@ FROM nginx:alpine AS runner
 # Copy static export
 COPY --from=builder /app/out /usr/share/nginx/html
 
-# Copy nginx config for SPA routing
+# Copy nginx config for static i18n routing
 RUN echo 'server { \
     listen 80; \
     server_name localhost; \
     root /usr/share/nginx/html; \
     index index.html; \
     \
-    location / { \
-        try_files $uri $uri/ $uri.html /index.html; \
+    # Root redirects to language detection page \
+    location = / { \
+        try_files /index.html =404; \
+    } \
+    \
+    # Language routes \
+    location /en/ { \
+        try_files $uri $uri/ $uri.html /en/index.html; \
+    } \
+    \
+    location /fr/ { \
+        try_files $uri $uri/ $uri.html /fr/index.html; \
+    } \
+    \
+    # Static assets \
+    location /_next/ { \
+        expires 1y; \
+        add_header Cache-Control "public, immutable"; \
     } \
     \
     location ~* \.(js|css|png|jpg|jpeg|gif|ico|svg|woff|woff2)$ { \
