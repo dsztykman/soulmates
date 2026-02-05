@@ -76,8 +76,8 @@ export function ServiceDetail({ type }: { type: ServiceType }) {
                     variants={staggerItem}
                     className="flex items-start gap-3"
                   >
-                    <span className="flex-shrink-0 w-6 h-6 rounded-full bg-[#5B2D8A]/10 flex items-center justify-center mt-0.5">
-                      <Check size={14} className="text-[#5B2D8A]" />
+                    <span className="flex-shrink-0 w-6 h-6 rounded-full bg-[#CCB380]/10 flex items-center justify-center mt-0.5">
+                      <Check size={14} className="text-[#CCB380]" />
                     </span>
                     <span className="text-[#FAFAFA]">{feature}</span>
                   </motion.li>
@@ -157,8 +157,8 @@ export function ServiceDetail({ type }: { type: ServiceType }) {
           >
             <motion.div variants={fadeUp} className="text-center mb-10">
               <div className="inline-flex items-center gap-2 mb-4">
-                <Film size={20} className="text-[#5B2D8A]" />
-                <span className="text-[#5B2D8A] text-sm uppercase tracking-[0.3em]">
+                <Film size={20} className="text-[#CCB380]" />
+                <span className="text-[#CCB380] text-sm uppercase tracking-[0.3em]">
                   {tVideos("subtitle")}
                 </span>
               </div>

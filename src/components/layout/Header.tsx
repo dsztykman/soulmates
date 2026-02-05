@@ -54,7 +54,7 @@ export function Header() {
             {/* Logo */}
             <Link href="/" className="flex items-center group">
               <Image
-                src="/images/logo-purple-transparent.png"
+                src="/images/logo-golden.png"
                 alt="Soulmates"
                 width={200}
                 height={67}
@@ -74,7 +74,7 @@ export function Header() {
                     className={cn(
                       "text-sm font-medium transition-colors duration-300 relative",
                       isActive
-                        ? "text-[#5B2D8A]"
+                        ? "text-[#CCB380]"
                         : "text-[#A1A1A1] hover:text-[#FAFAFA]"
                     )}
                   >
@@ -82,7 +82,7 @@ export function Header() {
                     {isActive && (
                       <motion.span
                         layoutId="activeNav"
-                        className="absolute -bottom-1 left-0 right-0 h-0.5 bg-[#5B2D8A]"
+                        className="absolute -bottom-1 left-0 right-0 h-0.5 bg-[#CCB380]"
                       />
                     )}
                   </Link>
@@ -100,7 +100,7 @@ export function Header() {
               {/* Mobile Menu Button */}
               <button
                 onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                className="lg:hidden p-2 text-[#FAFAFA] hover:text-[#5B2D8A] transition-colors"
+                className="lg:hidden p-2 text-[#FAFAFA] hover:text-[#CCB380] transition-colors"
                 aria-label="Toggle menu"
               >
                 {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -141,8 +141,8 @@ export function Header() {
                       className={cn(
                         "py-3 text-lg font-medium border-b border-[#252525] transition-colors",
                         isActive
-                          ? "text-[#5B2D8A] border-[#5B2D8A]"
-                          : "text-[#FAFAFA] hover:text-[#5B2D8A]"
+                          ? "text-[#CCB380] border-[#CCB380]"
+                          : "text-[#FAFAFA] hover:text-[#CCB380]"
                       )}
                     >
                       {t(link.labelKey)}

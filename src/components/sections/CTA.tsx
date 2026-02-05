@@ -24,7 +24,7 @@ export function CTA() {
       </div>
 
       {/* Decorative Elements */}
-      <div className="absolute top-0 left-0 w-64 h-64 bg-[#5B2D8A]/10 rounded-full blur-3xl" />
+      <div className="absolute top-0 left-0 w-64 h-64 bg-[#CCB380]/10 rounded-full blur-3xl" />
       <div className="absolute bottom-0 right-0 w-96 h-96 bg-[#C9A96A]/10 rounded-full blur-3xl" />
 
       <motion.div
@@ -37,10 +37,10 @@ export function CTA() {
         <div className="max-w-3xl mx-auto text-center">
           <motion.div
             variants={fadeUp}
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#5B2D8A]/10 border border-[#5B2D8A]/30 mb-8"
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#CCB380]/10 border border-[#CCB380]/30 mb-8"
           >
-            <Mail size={16} className="text-[#5B2D8A]" />
-            <span className="text-sm text-[#5B2D8A]">
+            <Mail size={16} className="text-[#CCB380]" />
+            <span className="text-sm text-[#CCB380]">
               {t("contact.description")}
             </span>
           </motion.div>

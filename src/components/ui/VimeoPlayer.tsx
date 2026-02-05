@@ -68,7 +68,7 @@ export function VimeoPlayer({
 
       {/* Play Button */}
       <div className="absolute inset-0 flex items-center justify-center">
-        <div className="w-20 h-20 rounded-full bg-[#5B2D8A] flex items-center justify-center group-hover:bg-[#7B4DAA] transition-colors duration-300 shadow-lg">
+        <div className="w-20 h-20 rounded-full bg-[#CCB380] flex items-center justify-center group-hover:bg-[#DCC799] transition-colors duration-300 shadow-lg">
           <Play size={32} className="text-white ml-1" fill="white" />
         </div>
       </div>

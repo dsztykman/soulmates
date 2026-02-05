@@ -25,17 +25,17 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
     ref
   ) => {
     const baseStyles =
-      "inline-flex items-center justify-center font-medium transition-all duration-300 rounded-full focus:outline-none focus-visible:ring-2 focus-visible:ring-[#5B2D8A] focus-visible:ring-offset-2 focus-visible:ring-offset-[#0A0A0A] disabled:opacity-50 disabled:cursor-not-allowed";
+      "inline-flex items-center justify-center font-medium transition-all duration-300 rounded-full focus:outline-none focus-visible:ring-2 focus-visible:ring-[#CCB380] focus-visible:ring-offset-2 focus-visible:ring-offset-[#0A0A0A] disabled:opacity-50 disabled:cursor-not-allowed";
 
     const variants = {
       primary:
-        "bg-[#5B2D8A] text-[#FAFAFA] hover:bg-[#7B4DAA] active:bg-[#4A2470] glow-primary",
+        "bg-[#CCB380] text-[#FAFAFA] hover:bg-[#DCC799] active:bg-[#B9A06D] glow-primary",
       secondary:
-        "bg-[#1A1A1A] text-[#FAFAFA] border border-[#5B2D8A]/30 hover:border-[#5B2D8A] hover:bg-[#252525]",
+        "bg-[#1A1A1A] text-[#FAFAFA] border border-[#CCB380]/30 hover:border-[#CCB380] hover:bg-[#252525]",
       outline:
-        "bg-transparent text-[#5B2D8A] border-2 border-[#5B2D8A] hover:bg-[#5B2D8A] hover:text-[#FAFAFA]",
+        "bg-transparent text-[#CCB380] border-2 border-[#CCB380] hover:bg-[#CCB380] hover:text-[#FAFAFA]",
       ghost:
-        "bg-transparent text-[#FAFAFA] hover:bg-[#1A1A1A] hover:text-[#5B2D8A]",
+        "bg-transparent text-[#FAFAFA] hover:bg-[#1A1A1A] hover:text-[#CCB380]",
     };
 
     const sizes = {

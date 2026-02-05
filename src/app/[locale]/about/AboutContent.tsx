@@ -40,7 +40,7 @@ export function AboutContent() {
                 />
               </div>
               {/* Decorative element */}
-              <div className="absolute -bottom-6 -right-6 w-48 h-48 rounded-2xl bg-[#5B2D8A]/10 border border-[#5B2D8A]/30 -z-10" />
+              <div className="absolute -bottom-6 -right-6 w-48 h-48 rounded-2xl bg-[#CCB380]/10 border border-[#CCB380]/30 -z-10" />
             </motion.div>
 
             {/* Content */}
@@ -54,7 +54,7 @@ export function AboutContent() {
 
               {/* Mission */}
               <div className="p-6 rounded-2xl bg-[#1A1A1A] border border-[#252525]">
-                <h3 className="text-xl font-semibold text-[#5B2D8A] mb-3 ">
+                <h3 className="text-xl font-semibold text-[#CCB380] mb-3 ">
                   {t("mission.title")}
                 </h3>
                 <p className="text-[#A1A1A1]">{t("mission.description")}</p>
@@ -90,10 +90,10 @@ export function AboutContent() {
               const Icon = valueIcons[index];
               return (
                 <motion.div key={index} variants={staggerItem}>
-                  <Card className="h-full text-center border border-[#252525] hover:border-[#5B2D8A]/50">
+                  <Card className="h-full text-center border border-[#252525] hover:border-[#CCB380]/50">
                     <CardContent className="p-8">
-                      <div className="w-14 h-14 rounded-xl bg-[#5B2D8A]/10 flex items-center justify-center mx-auto mb-6">
-                        <Icon size={28} className="text-[#5B2D8A]" />
+                      <div className="w-14 h-14 rounded-xl bg-[#CCB380]/10 flex items-center justify-center mx-auto mb-6">
+                        <Icon size={28} className="text-[#CCB380]" />
                       </div>
                       <h3 className="text-lg font-semibold text-[#FAFAFA] mb-3 ">
                         {value.title}

@@ -2,10 +2,10 @@
 
 /* Design System - Elegant Dark Theme */
 :root {
-  /* Primary Colors - Purple */
-  --color-primary: #5B2D8A;
-  --color-primary-light: #7B4DAA;
-  --color-primary-dark: #4A2470;
+  /* Primary Colors - Golden */
+  --color-primary: #CCB380;
+  --color-primary-light: #DCC799;
+  --color-primary-dark: #B9A06D;
 
   /* Secondary Colors - Beige */
   --color-secondary: #C9A96A;
@@ -23,7 +23,7 @@
   --color-text-muted: #6B6B6B;
 
   /* Gradients */
-  --gradient-primary: linear-gradient(135deg, #5B2D8A 0%, #7B4DAA 50%, #4A2470 100%);
+  --gradient-primary: linear-gradient(135deg, #CCB380 0%, #DCC799 50%, #B9A06D 100%);
   --gradient-dark: linear-gradient(180deg, #0A0A0A 0%, #1A1A1A 100%);
   --gradient-overlay: linear-gradient(180deg, rgba(10,10,10,0.8) 0%, rgba(10,10,10,0.4) 50%, rgba(10,10,10,0.8) 100%);
 
@@ -160,11 +160,11 @@ h1, h2, h3, h4, h5, h6 {
 
   /* Glow effects */
   .glow-primary {
-    box-shadow: 0 0 20px rgba(91, 45, 138, 0.3);
+    box-shadow: 0 0 20px rgba(204, 179, 128, 0.3);
   }
 
   .glow-primary-lg {
-    box-shadow: 0 0 40px rgba(91, 45, 138, 0.4);
+    box-shadow: 0 0 40px rgba(204, 179, 128, 0.4);
   }
 }
 
@@ -244,7 +244,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .behold-container behold-widget::part(post):hover {
   transform: scale(1.02);
-  box-shadow: 0 8px 30px rgba(91, 45, 138, 0.3);
+  box-shadow: 0 8px 30px rgba(204, 179, 128, 0.3);
 }
 
 .behold-container behold-widget::part(image) {

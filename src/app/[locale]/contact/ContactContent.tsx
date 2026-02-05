@@ -53,9 +53,9 @@ export function ContactContent() {
         >
           <motion.div
             variants={heroTextVariants}
-            className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-[#5B2D8A]/10 border border-[#5B2D8A]/30 mb-8"
+            className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-[#CCB380]/10 border border-[#CCB380]/30 mb-8"
           >
-            <MessageSquare size={32} className="text-[#5B2D8A]" />
+            <MessageSquare size={32} className="text-[#CCB380]" />
           </motion.div>
 
           <motion.h1
@@ -93,15 +93,15 @@ export function ContactContent() {
               <div className="space-y-6 mb-10">
                 {contactInfo.map((info, index) => (
                   <div key={index} className="flex items-start gap-4">
-                    <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-[#5B2D8A]/10 flex items-center justify-center">
-                      <info.icon size={22} className="text-[#5B2D8A]" />
+                    <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-[#CCB380]/10 flex items-center justify-center">
+                      <info.icon size={22} className="text-[#CCB380]" />
                     </div>
                     <div>
                       <p className="text-sm text-[#A1A1A1] mb-1">{info.label}</p>
                       {info.href ? (
                         <a
                           href={info.href}
-                          className="text-[#FAFAFA] hover:text-[#5B2D8A] transition-colors"
+                          className="text-[#FAFAFA] hover:text-[#CCB380] transition-colors"
                         >
                           {info.value}
                         </a>

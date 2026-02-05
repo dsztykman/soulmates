@@ -52,7 +52,7 @@ export function Footer() {
                   href={social.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-10 h-10 rounded-full bg-[#1A1A1A] flex items-center justify-center text-[#A1A1A1] hover:bg-[#5B2D8A] hover:text-[#0A0A0A] transition-all duration-300"
+                  className="w-10 h-10 rounded-full bg-[#1A1A1A] flex items-center justify-center text-[#A1A1A1] hover:bg-[#CCB380] hover:text-[#0A0A0A] transition-all duration-300"
                   aria-label={social.label}
                 >
                   <social.icon size={18} />
@@ -71,7 +71,7 @@ export function Footer() {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="text-[#A1A1A1] hover:text-[#5B2D8A] transition-colors"
+                    className="text-[#A1A1A1] hover:text-[#CCB380] transition-colors"
                   >
                     {t(`common.navigation.${link.labelKey}`)}
                   </Link>
@@ -89,7 +89,7 @@ export function Footer() {
               <li>
                 <a
                   href={`mailto:${SITE_CONFIG.email}`}
-                  className="hover:text-[#5B2D8A] transition-colors"
+                  className="hover:text-[#CCB380] transition-colors"
                 >
                   {SITE_CONFIG.email}
                 </a>
@@ -97,7 +97,7 @@ export function Footer() {
               <li>
                 <a
                   href={`tel:${SITE_CONFIG.phone}`}
-                  className="hover:text-[#5B2D8A] transition-colors"
+                  className="hover:text-[#CCB380] transition-colors"
                 >
                   {SITE_CONFIG.phone}
                 </a>
@@ -116,7 +116,7 @@ export function Footer() {
               &copy; {currentYear} {SITE_CONFIG.name}. {t("footer.copyright")}
             </p>
             <p className="flex items-center gap-1">
-              Crafted with <span className="text-[#5B2D8A]">♪</span> in Paris
+              Crafted with <span className="text-[#CCB380]">♪</span> in Paris
             </p>
           </div>
         </div>

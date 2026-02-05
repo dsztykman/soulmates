@@ -62,9 +62,9 @@ export function GalleryContent() {
         >
           <motion.div
             variants={heroTextVariants}
-            className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-[#5B2D8A]/10 border border-[#5B2D8A]/30 mb-8"
+            className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-[#CCB380]/10 border border-[#CCB380]/30 mb-8"
           >
-            <Camera size={32} className="text-[#5B2D8A]" />
+            <Camera size={32} className="text-[#CCB380]" />
           </motion.div>
 
           <motion.h1
@@ -98,7 +98,7 @@ export function GalleryContent() {
               className={cn(
                 "flex items-center gap-2 px-8 py-3 rounded-full text-sm font-medium transition-all duration-300",
                 activeTab === "photos"
-                  ? "bg-[#5B2D8A] text-white"
+                  ? "bg-[#CCB380] text-white"
                   : "bg-[#1A1A1A] text-[#A1A1A1] hover:text-[#FAFAFA] border border-[#252525]"
               )}
             >
@@ -110,7 +110,7 @@ export function GalleryContent() {
               className={cn(
                 "flex items-center gap-2 px-8 py-3 rounded-full text-sm font-medium transition-all duration-300",
                 activeTab === "videos"
-                  ? "bg-[#5B2D8A] text-white"
+                  ? "bg-[#CCB380] text-white"
                   : "bg-[#1A1A1A] text-[#A1A1A1] hover:text-[#FAFAFA] border border-[#252525]"
               )}
             >
@@ -137,8 +137,8 @@ export function GalleryContent() {
                       className={cn(
                         "px-6 py-2 rounded-full text-sm font-medium transition-all duration-300",
                         activeCategory === category
-                          ? "bg-[#5B2D8A] text-white"
-                          : "bg-[#1A1A1A] text-[#A1A1A1] hover:text-[#FAFAFA] border border-[#252525] hover:border-[#5B2D8A]/50"
+                          ? "bg-[#CCB380] text-white"
+                          : "bg-[#1A1A1A] text-[#A1A1A1] hover:text-[#FAFAFA] border border-[#252525] hover:border-[#CCB380]/50"
                       )}
                     >
                       {t(`categories.${category}`)}
@@ -183,7 +183,7 @@ export function GalleryContent() {
                           />
                           <div className="absolute inset-0 bg-gradient-to-t from-[#0A0A0A]/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                           <div className="absolute bottom-4 left-4 right-4 text-left opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                            <span className="text-sm text-[#5B2D8A] capitalize">
+                            <span className="text-sm text-[#CCB380] capitalize">
                               {t(`categories.${image.category}`)}
                             </span>
                           </div>

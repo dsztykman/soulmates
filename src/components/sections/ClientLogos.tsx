@@ -2,6 +2,7 @@
 
 import { useTranslations } from "next-intl";
 import { motion } from "framer-motion";
+import Image from "next/image";
 import { CORPORATE_CLIENTS } from "@/lib/constants";
 import { fadeUp, staggerContainer } from "@/lib/animations";
 
@@ -38,9 +39,16 @@ export function ClientLogos() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: index * 0.05, duration: 0.5 }}
               viewport={{ once: true }}
-              className="flex items-center justify-center p-4 sm:p-6 rounded-xl bg-[#1A1A1A] hover:bg-[#252525] border border-[#252525] hover:border-[#5B2D8A]/50 transition-all duration-300 group cursor-pointer"
+              className="flex flex-col items-center justify-center p-4 sm:p-6 rounded-xl bg-[#1A1A1A] hover:bg-[#252525] border border-[#252525] hover:border-[#CCB380]/50 transition-all duration-300 group cursor-pointer min-h-[100px]"
             >
-              <span className="text-[#A1A1A1] group-hover:text-[#FAFAFA] text-sm sm:text-base font-semibold tracking-wide transition-colors duration-300 text-center">
+              <Image
+                src={client.logo}
+                alt={client.name}
+                width={64}
+                height={64}
+                className="w-12 h-12 sm:w-16 sm:h-16 object-contain mb-2 opacity-70 group-hover:opacity-100 transition-opacity duration-300"
+              />
+              <span className="text-[#A1A1A1] group-hover:text-[#FAFAFA] text-xs sm:text-sm font-medium tracking-wide transition-colors duration-300 text-center">
                 {client.name}
               </span>
             </motion.a>

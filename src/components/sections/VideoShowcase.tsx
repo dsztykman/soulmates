@@ -29,8 +29,8 @@ export function VideoShowcase() {
             variants={fadeUp}
             className="inline-flex items-center gap-2 mb-4"
           >
-            <Film size={20} className="text-[#5B2D8A]" />
-            <span className="text-[#5B2D8A] text-sm uppercase tracking-[0.3em]">
+            <Film size={20} className="text-[#CCB380]" />
+            <span className="text-[#CCB380] text-sm uppercase tracking-[0.3em]">
               {t("subtitle")}
             </span>
           </motion.div>

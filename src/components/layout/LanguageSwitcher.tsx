@@ -23,7 +23,7 @@ export function LanguageSwitcher() {
           className={cn(
             "px-3 py-1.5 text-sm font-medium rounded-full transition-all duration-300",
             locale === loc
-              ? "bg-[#5B2D8A] text-[#0A0A0A]"
+              ? "bg-[#CCB380] text-[#0A0A0A]"
               : "text-[#A1A1A1] hover:text-[#FAFAFA]"
           )}
         >

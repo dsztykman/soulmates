@@ -54,9 +54,9 @@ export function ServiceHero({ type }: { type: ServiceType }) {
       >
         <motion.div
           variants={heroTextVariants}
-          className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-[#5B2D8A]/10 border border-[#5B2D8A]/30 mb-8"
+          className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-[#CCB380]/10 border border-[#CCB380]/30 mb-8"
         >
-          <Icon size={32} className="text-[#5B2D8A]" />
+          <Icon size={32} className="text-[#CCB380]" />
         </motion.div>
 
         <motion.h1

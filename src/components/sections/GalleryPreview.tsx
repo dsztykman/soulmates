@@ -25,7 +25,7 @@ export function GalleryPreview() {
         >
           <motion.p
             variants={fadeUp}
-            className="text-[#5B2D8A] text-sm uppercase tracking-[0.3em] mb-4"
+            className="text-[#CCB380] text-sm uppercase tracking-[0.3em] mb-4"
           >
             {t("gallery.subtitle")}
           </motion.p>
