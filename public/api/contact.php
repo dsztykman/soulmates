@@ -12,6 +12,60 @@ ini_set('log_errors', 1);
 $SITE_EMAIL = 'info@soulmatesorchestra.com';
 $SITE_NAME = 'Soulmates Orchestra';
 
+/**
+ * Send email via direct SMTP socket to localhost:25 (no authentication).
+ * Returns true on success, or an error string on failure.
+ */
+function smtp_send($from, $to, $subject, $body, $headers) {
+    $smtp = @fsockopen('localhost', 25, $errno, $errstr, 5);
+    if (!$smtp) {
+        return "Could not connect to local SMTP: $errstr ($errno)";
+    }
+
+    $response = fgets($smtp, 512);
+    if (substr($response, 0, 3) !== '220') {
+        fclose($smtp);
+        return "SMTP greeting failed: $response";
+    }
+
+    $hostname = gethostname() ?: 'localhost';
+    $commands = [
+        "EHLO $hostname" => '250',
+        "MAIL FROM:<$from>" => '250',
+        "RCPT TO:<$to>" => '250',
+        "DATA" => '354',
+    ];
+
+    foreach ($commands as $cmd => $expect) {
+        fwrite($smtp, "$cmd\r\n");
+        $response = fgets($smtp, 512);
+        if (substr($response, 0, 3) !== $expect) {
+            fwrite($smtp, "QUIT\r\n");
+            fclose($smtp);
+            return "SMTP command '$cmd' failed: $response";
+        }
+        // Read any continuation lines (e.g. EHLO multi-line response)
+        if ($expect === '250' && strpos($cmd, 'EHLO') === 0) {
+            while (substr($response, 3, 1) === '-') {
+                $response = fgets($smtp, 512);
+            }
+        }
+    }
+
+    // Send headers + body
+    $msg = implode("\r\n", $headers) . "\r\n\r\n" . $body . "\r\n.\r\n";
+    fwrite($smtp, $msg);
+    $response = fgets($smtp, 512);
+    fwrite($smtp, "QUIT\r\n");
+    fclose($smtp);
+
+    if (substr($response, 0, 3) !== '250') {
+        return "SMTP DATA rejected: $response";
+    }
+
+    return true;
+}
+
 // CORS headers
 header('Access-Control-Allow-Origin: *');
 header('Access-Control-Allow-Methods: POST, OPTIONS');
@@ -99,17 +153,18 @@ try {
     $teamBody .= "--------\n";
     $teamBody .= "$message\n";
 
-    // Email headers - use localhost to avoid SMTP authentication
-    $fromEmail = 'noreply@' . (gethostname() ?: 'localhost');
-    $headers = "From: $SITE_NAME <$fromEmail>\r\n";
-    $headers .= "Reply-To: $name <$email>\r\n";
-    $headers .= "X-Mailer: PHP/" . phpversion();
-    ini_set('sendmail_from', $fromEmail);
+    // Send email via direct SMTP to localhost (bypasses msmtp/authenticated relay)
+    $fromEmail = 'noreply@localhost';
+    $sent = smtp_send($fromEmail, $SITE_EMAIL, $teamSubject, $teamBody, [
+        "From: $SITE_NAME <$fromEmail>",
+        "Reply-To: $name <$email>",
+        "To: $SITE_EMAIL",
+        "Subject: $teamSubject",
+        "MIME-Version: 1.0",
+        "Content-Type: text/plain; charset=UTF-8",
+    ]);
 
-    // Send email to team
-    $sent = @mail($SITE_EMAIL, $teamSubject, $teamBody, $headers);
-
-    if ($sent) {
+    if ($sent === true) {
         // Try to send confirmation to user (don't fail if this doesn't work)
         $userSubject = "Thank you for your inquiry - Soulmates Orchestra";
         $userBody = "Dear $name,\n\n";
@@ -119,16 +174,18 @@ try {
         $userBody .= "Warm regards,\n";
         $userBody .= "The Soulmates Orchestra Team\n";
 
-        $userHeaders = "From: $SITE_NAME <$fromEmail>\r\n";
-        $userHeaders .= "X-Mailer: PHP/" . phpversion();
-
-        @mail($email, $userSubject, $userBody, $userHeaders);
+        @smtp_send($fromEmail, $email, $userSubject, $userBody, [
+            "From: $SITE_NAME <$fromEmail>",
+            "To: $email",
+            "Subject: $userSubject",
+            "MIME-Version: 1.0",
+            "Content-Type: text/plain; charset=UTF-8",
+        ]);
 
         echo json_encode(['success' => true]);
     } else {
-        // mail() failed - check if it's configured
         http_response_code(500);
-        echo json_encode(['error' => 'Email sending failed. Please contact us directly at ' . $SITE_EMAIL]);
+        echo json_encode(['error' => 'Email sending failed: ' . $sent . '. Please contact us directly at ' . $SITE_EMAIL]);
     }
 
 } catch (Exception $e) {
