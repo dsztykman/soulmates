@@ -99,10 +99,12 @@ try {
     $teamBody .= "--------\n";
     $teamBody .= "$message\n";
 
-    // Email headers
-    $headers = "From: $SITE_NAME <noreply@soulmatesorchestra.com>\r\n";
+    // Email headers - use localhost to avoid SMTP authentication
+    $fromEmail = 'noreply@' . (gethostname() ?: 'localhost');
+    $headers = "From: $SITE_NAME <$fromEmail>\r\n";
     $headers .= "Reply-To: $name <$email>\r\n";
     $headers .= "X-Mailer: PHP/" . phpversion();
+    ini_set('sendmail_from', $fromEmail);
 
     // Send email to team
     $sent = @mail($SITE_EMAIL, $teamSubject, $teamBody, $headers);
@@ -117,7 +119,7 @@ try {
         $userBody .= "Warm regards,\n";
         $userBody .= "The Soulmates Orchestra Team\n";
 
-        $userHeaders = "From: $SITE_NAME <hello@soulmatesorchestra.com>\r\n";
+        $userHeaders = "From: $SITE_NAME <$fromEmail>\r\n";
         $userHeaders .= "X-Mailer: PHP/" . phpversion();
 
         @mail($email, $userSubject, $userBody, $userHeaders);
